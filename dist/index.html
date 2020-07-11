@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Todo List</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <div id="titleBar">
+      <div><h1>ToDo's</h1></div>
+      <button id="showNewTaskBtn"><span class="plusIcon"> + </span>New Task</button>
+    </div>
+    <div id="darkenedBackground"></div>
+    <form id="newTask">
+        <h2>Add Task</h2>
+        <div class="close">&times;</div>
+        <p><input type="text" placeholder="What do you want to do?" id="description"></p>
+        <p>
+          <label for="date">Due Date: </label> 
+          <input type="date" name="date" id="date"> <br>
+        </p>
+        <div id="wrapper">
+          <p>
+          <label for="priority">Priority: </label>
+          <input type="radio" name="priority" id="1" checked>Low</input>
+          <input type="radio" name="priority" id="2">Medium</input>
+          <input type="radio" name="priority" id="3">High</input>
+          </p>
+        </div>
+        <button type="button" id="addTask">Add</button>
+    </form>
+    <form id="newProject">
+        <h2>Add Project</h2>
+        <div class="close">&times;</div>
+        <p>
+          <label for="name">Name</label> 
+          <input type="text" name="name" id="projectName"> <br>
+        </p> 
+    
+        <button type="button" id="addProject">Add</button>
+    </form>
+    <nav id="navbar">
+      <div id="today" class="tab active">Today</div>
+      <div id="upcoming" class="tab">Upcoming</div>
+      <div id="projects" class="tab">Projects</div>
+      <button id="showNewProjectBtn" ><span class="plusIcon"> + </span>New Project</button>
+    </nav>
+    <div class="wholePageContainer">      
+    </div>
+    
+    <script src="main.js"></script>
+ </body>
+</html>
