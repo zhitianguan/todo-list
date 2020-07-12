@@ -15,7 +15,7 @@ const tasksManager = (() => {
             priorityInput.checked
         )
         let priority = selectedPriority.id;
-        let task = new Task (description.value, formatDate(new Date(dueDate.value)), priority, false)
+        let task = new Task (description.value, formatDate(new Date(dueDate.value.replaceAll('-', '/'))), priority, false)
         taskList.push(task)
         window.localStorage.setItem('taskList', JSON.stringify(taskList));
     }
@@ -46,7 +46,7 @@ const tasksManager = (() => {
 
         if (description.value && dueDate.value){
             let index = Array.prototype.indexOf.call(e.target.parentNode.parentNode.parentNode.childNodes, e.target.parentNode.parentNode)
-            let task = new Task (description.value, formatDate(new Date(dueDate.value)), 0, false)
+            let task = new Task (description.value, formatDate(new Date(dueDate.value.replaceAll('-', '/'))), 0, false)
             projectList[index].addTask(task)
             tabsController.setTabToActive(document.querySelector('.tab.active')) //update current page
             window.localStorage.setItem('projectList',  JSON.stringify(projectList));
