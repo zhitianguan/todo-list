@@ -5,6 +5,7 @@ body {
     margin: 0;
     color: rgb(58, 58, 58);
     background-color: rgb(230, 230, 230);
+    font-size: 15px;
 }
 
 h1 {
@@ -154,7 +155,29 @@ h2 {
     font-size: 20px;
 }
 
+input {
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+form#newTask input[type="text"], form#newProject input[type="text"] {
+    width: 95%;
+}
+
+form.miniForm input[type="text"]{
+    width: 60%;
+}
+
+select#priority {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 15px;
+}
+
+form#newTask label, form#newProject label{
+    margin-right: 20px;
+}
+
 button {
+    font-family: 'Nunito Sans', sans-serif;
     background: none;
 	border: none;
     background-color: #2867b2;
