@@ -1,6 +1,4 @@
 import './styles.css'
-//import '../node_modules/@fortawesome/fontawesome-free/js/all'
-//import '../node_modules/@fortawesome/fontawesome-free/css/all.css'
 import formController from "./modules/formController"
 import tasksManager from "./modules/tasksManager"
 import tabsController from "../src/modules/tabsController"
@@ -93,7 +91,9 @@ const eventBinder = (() => {
             tabsController.setTabToActive(document.querySelector('.tab.active')) //update current page
             formController.closeTaskForm()
         } else {
-            if (!document.querySelector('#errorMsg')) DOMController.addErrorMsg(e)
+            if (!document.querySelector('form#newTask #errorMsg')) {
+                DOMController.addErrorMsg(e)
+            }
         }
     })
     addProjectBtn.addEventListener('click', (e)=>{
@@ -102,7 +102,9 @@ const eventBinder = (() => {
             tabsController.setTabToActive(document.querySelector('.tab.active')) //update current page
             formController.closeProjectForm()
         } else {
-            if (!document.querySelector('#errorMsg')) DOMController.addErrorMsg(e)
+            if (!document.querySelector('form#newProject #errorMsg')) {
+                DOMController.addErrorMsg(e)
+            }
         }
     })
 

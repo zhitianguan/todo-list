@@ -47,6 +47,8 @@ const formController = (()=> {
         e.target.parentNode.querySelector('.descriptionMini').value = ''
         e.target.parentNode.style.display = 'none'
         e.target.parentNode.parentNode.querySelector('.showMiniFormBtn').style.display = 'block'
+        if (e.target.parentNode.querySelector('#errorMsg')) 
+            e.target.parentNode.removeChild(e.target.parentNode.querySelector('#errorMsg'))
     }
 
     

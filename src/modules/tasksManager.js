@@ -30,7 +30,7 @@ const tasksManager = (() => {
             taskList.push(task)
             tabsController.setTabToActive(document.querySelector('.tab.active')) //update current page
             window.localStorage.setItem('taskList',  JSON.stringify(taskList));
-        } else {
+        } else if (!e.target.parentNode.querySelector('#errorMsg')) {
             DOMController.addErrorMsg(e)
         }
     }
