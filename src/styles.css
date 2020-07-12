@@ -242,7 +242,7 @@ div#darkenedBackground {
     display: none;
     background-color: rgba(0,0,0,0.4);
     z-index: 2;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -252,7 +252,7 @@ div#darkenedBackground {
 
 form#newProject {
     z-index: 3;
-    position: absolute;
+    position: fixed;
     display: none;
     top: 100px;
     left: 0;
@@ -269,7 +269,7 @@ form#newProject {
 form#newTask {
     z-index: 3;
     display: none;
-    position: absolute;
+    position: fixed;
     width: 400px;
     top: 100px;
     left: 0;
